@@ -22,5 +22,9 @@ public class Pratica1TemperaturaInstancia {
     public void setTemperatura(double valor) {
         this.temperatura = valor;
     }
+    public Double kelvinCelcius(){
+        
+        return temperatura - 273.15;
+    }
 
 }
