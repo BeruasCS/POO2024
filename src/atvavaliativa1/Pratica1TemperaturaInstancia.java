@@ -29,7 +29,9 @@ public class Pratica1TemperaturaInstancia {
         return (temperatura-273) * 9/5 +32;
     }
     public Double celciusKelvin(){
-        
+        if (temperatura < -273.15) {
+            throw new IllegalArgumentException("Temperatura em Celsius não pode ser menor que -273.15.");
+        }
        return temperatura + 273.15;
     }
     public Double celciusFahrenheit(){
@@ -41,6 +43,6 @@ public class Pratica1TemperaturaInstancia {
     }
     public Double fahrenheitCelcius(){
         
-        return (temperatura -32) * 5/9;
+        return (temperatura - 32) * 5/9;
     }
 }
