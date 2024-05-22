@@ -14,11 +14,9 @@ public class Pratica1TemperaturaInstancia {
     public Pratica1TemperaturaInstancia(double valor) {
         this.temperatura = valor;
     }
-
     public double getTemperatura() {
         return temperatura;
     }
-
     public void setTemperatura(double valor) {
         this.temperatura = valor;
     }
@@ -27,11 +25,11 @@ public class Pratica1TemperaturaInstancia {
         return temperatura - 273.15;
     }
     public Double kelvinFahrenheit(){
+        
         return (temperatura-273) * 9/5 +32;
     }
     public Double celciusKelvin(){
         
-        
-        return temperatura + 273.15;
+       return temperatura + 273.15;
     }
 }
