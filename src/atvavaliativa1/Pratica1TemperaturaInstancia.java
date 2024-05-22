@@ -41,7 +41,9 @@ public class Pratica1TemperaturaInstancia {
         return (temperatura * 9/5) + 32;
     }
     public Double fahrenheitKelvin(){
-        
+         if (temperatura < -459.67) {
+            throw new IllegalArgumentException("Temperatura em Fahrenheit não pode ser menor que -459.67.");
+        }
         return (temperatura - 32) * 5/9 +273.15;
     }
     public Double fahrenheitCelcius(){
