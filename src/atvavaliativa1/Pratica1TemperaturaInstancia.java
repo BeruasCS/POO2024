@@ -35,9 +35,9 @@ public class Pratica1TemperaturaInstancia {
     public Double celciusFahrenheit(){
         return (temperatura * 9/5) + 32;
     }
-    
-    
-    
-    
+    public Double fahrenheitKelvin(){
+        
+        return (temperatura - 32) * 5/9 +273.15;
+    }
     
 }
