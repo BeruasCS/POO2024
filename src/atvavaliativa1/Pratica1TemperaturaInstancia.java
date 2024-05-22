@@ -9,5 +9,18 @@ package atvavaliativa1;
  * @author beruas
  */
 public class Pratica1TemperaturaInstancia {
-    
+        private double temperatura; // valor absoluto da unidade de temperatura
+
+    public Pratica1TemperaturaInstancia(double valor) {
+        this.temperatura = valor;
+    }
+
+    public double getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(double valor) {
+        this.temperatura = valor;
+    }
+
 }
