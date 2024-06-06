@@ -34,4 +34,10 @@ public class Pratica2TemperaturaEstatica {
         }
         return (temperatura * 9/5) + 32;
     }
-}
+    public static Double fahrenheitParaKelvinEstatico(double temperatura) {
+        if (temperatura < -459.67) {
+            throw new IllegalArgumentException("Temperatura em Fahrenheit não pode ser menor que -459.67.");
+        }
+        return (temperatura - 32) * 5/9 + 273.15;
+    }
+}  
