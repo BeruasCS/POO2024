@@ -16,4 +16,10 @@ public class Pratica2TemperaturaEstatica {
         }
         return temperatura - 273.15;
     }
+     public static Double kelvinParaFahrenheitEstatico(double temperatura) {
+        if (temperatura < 0) {
+            throw new IllegalArgumentException("Temperatura em Kelvin não pode ser menor que 0.");
+        }
+        return (temperatura - 273) * 9/5 + 32;
+    }
 }
