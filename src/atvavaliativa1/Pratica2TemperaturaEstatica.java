@@ -10,4 +10,10 @@ package atvavaliativa1;
  */
 public class Pratica2TemperaturaEstatica {
     
+     public static Double kelvinParaCelsiusEstatico(double temperatura) {
+        if (temperatura < 0) {
+            throw new IllegalArgumentException("Temperatura em Kelvin não pode ser menor que 0.");
+        }
+        return temperatura - 273.15;
+    }
 }
