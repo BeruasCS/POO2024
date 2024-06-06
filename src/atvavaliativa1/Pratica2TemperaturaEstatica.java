@@ -27,5 +27,11 @@ public class Pratica2TemperaturaEstatica {
               throw new IllegalArgumentException("Temperatura em Celsius não pode ser menor que -273.15.");
           }
           return temperatura + 273.15;
-      }   
+    }  
+    public static Double celsiusParaFahrenheitEstatico(double temperatura) {
+        if (temperatura < -273.15) {
+            throw new IllegalArgumentException("Temperatura em Celsius não pode ser menor que -273.15.");
+        }
+        return (temperatura * 9/5) + 32;
+    }
 }
