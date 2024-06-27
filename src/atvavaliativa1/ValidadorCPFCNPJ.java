@@ -13,4 +13,14 @@ public class ValidadorCPFCNPJ {
     public int obterDigito(long cpf, int pos){
         return (int) ((cpf/ Math.pow(10, pos)) % 10);
     }
+        public static boolean isCpfValido(long cpf) {
+       
+        return true; }
+    
+    
+    
+    
+    
+    
+    
 }
