@@ -14,7 +14,11 @@ public class ValidadorCPFCNPJ {
         return (int) ((cpf/ Math.pow(10, pos)) % 10);
     }
         public static boolean isCpfValido(long cpf) {
-       
+             
+          for (int i = 10; i >= 2; i--) {
+           
+            }
+
         return true; }
     
     
