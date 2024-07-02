@@ -21,27 +21,11 @@ private static int validar=0;
             return false;
         }
           
-        int z = 0;  
-        int n=10;
-        int soma = 0;
-        int digito= 0;
+      int soma = 0;
+        for (int i = 0; i < 9; i++) {
+            soma += obterDigito(cpf, 10 - i) * (10 - i);
+        }
+        int primeiroDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
         
-        for (int i = n; i >= 2; i--) {
-           
-            soma = (obterDigito(cpf, z) * i) + soma;
-            z++;
-        }
-        if (soma%11<2) {
-            
-            digito =0;
-        } if(soma%11>2){
-            digito = soma -(soma%11);
-        }
-        if (obterDigito(cpf, 11)== digito){
-            
-          validar = validar +1;  
-            n++;
-        }
     }
-    
 }
