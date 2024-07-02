@@ -31,6 +31,7 @@ private static int validar=0;
             soma += obterDigito(cpf, 11 - i) * (11 - i);
         }
         int segundoDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
-      
+      return (obterDigito(cpf, 1) == primeiroDigitoVerificador) &&
+               (obterDigito(cpf, 0) == segundoDigitoVerificador);
     }
 }
