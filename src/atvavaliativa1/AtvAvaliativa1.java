@@ -15,8 +15,8 @@ public class AtvAvaliativa1 {
      */
     public static void main(String[] args) {
         Pratica1TemperaturaInstancia tempC = new Pratica1TemperaturaInstancia(25.0);
-        System.out.println("Celsius para Kelvin: " + tempC.celciusKelvin());
-        System.out.println("kelvin para celcius"+ tempC.kelvinCelcius());
+        System.out.println("Celsius para Kelvin: " + tempC.celciusParaKelvin());
+        System.out.println("kelvin para celcius"+ tempC.celciusParaKelvin());
     }
     
 }
