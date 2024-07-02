@@ -17,6 +17,10 @@ private static int validar=0;
     
     public static boolean isCpfValido(long cpf) {
         
+          if (cpf < 10000000000L || cpf > 99999999999L) {
+            return false;
+        }
+          
         int z = 0;  
         int n=10;
         int soma = 0;
@@ -36,7 +40,7 @@ private static int validar=0;
         if (obterDigito(cpf, 11)== digito){
             
           validar = validar +1;  
-  
+            n++;
         }
     }
     
