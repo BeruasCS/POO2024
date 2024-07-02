@@ -10,7 +10,6 @@ package atvavaliativa1;
  * @author beruas
  */
 public class ValidadorCPFCNPJ {
-private static int validar=0;
     public static int obterDigito(long cpf, int pos){
         return (int) ((cpf / (long) Math.pow(10, pos)) % 10);
     }
