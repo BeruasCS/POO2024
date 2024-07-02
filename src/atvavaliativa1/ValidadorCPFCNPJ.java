@@ -22,10 +22,15 @@ private static int validar=0;
         }
           
       int soma = 0;
-        for (int i = 0; i < 9; i++) {
+       for (int i = 0; i < 9; i++) {
             soma += obterDigito(cpf, 10 - i) * (10 - i);
         }
         int primeiroDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
-        
+        soma = 0;
+      for (int i = 0; i < 10; i++) {
+            soma += obterDigito(cpf, 11 - i) * (11 - i);
+        }
+        int segundoDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
+      
     }
 }
