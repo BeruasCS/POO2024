@@ -17,6 +17,19 @@ public class AtvAvaliativa1 {
         Pratica1TemperaturaInstancia tempC = new Pratica1TemperaturaInstancia(25.0);
         System.out.println("Celsius para Kelvin: " + tempC.celciusParaKelvin());
         System.out.println("kelvin para celcius"+ tempC.celciusParaKelvin());
+        
+        
+        long cpfValido = 14230703058L; // Exemplo de CPF válido
+        long cpfInvalido = 12345678900L; // Exemplo de CPF inválido
+
+        System.out.println("O CPF " + cpfValido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfValido));
+        System.out.println("O CPF " + cpfInvalido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfInvalido));
+        String cpfStringValido = "12345678909"; // Exemplo de CPF válido
+        String cpfStringInvalido = "12345678900"; // Exemplo de CPF inválido
+
+       // System.out.println("O CPF " + cpfStringValido + " é válido? " + isCpfValido(cpfStringValido));
+        //System.out.println("O CPF " + cpfStringInvalido + " é válido? " + isCpfValido(cpfStringInvalido));
+        
     }
     
 }
