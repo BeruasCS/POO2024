@@ -19,7 +19,7 @@ public class ValidadorCPFCNPJ {
         if (cpf < 10000000000L || cpf > 99999999999L) {
             return false;
         }
-
+       
         int soma = 0;
         for (int i = 0; i < 9; i++) {
             soma += obterDigito(cpf, 10 - i) * (10 - i);
@@ -38,6 +38,9 @@ public class ValidadorCPFCNPJ {
     }
 
     public static boolean isCpfValido(String cpf) {
+        
+        cpf = cpf.replace(".", "").replace("-", "");
+
         try {
             long cpfLong = Long.parseLong(cpf);
             return isCpfValido(cpfLong);
