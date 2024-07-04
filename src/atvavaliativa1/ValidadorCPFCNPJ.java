@@ -45,4 +45,26 @@ public class ValidadorCPFCNPJ {
             return false;
         }
     }
+    public static boolean isCnpjValido(long cnpj) {
+        if (cnpj < 10000000000000L || cnpj > 99999999999999L) {
+            return false;
+        }
+
+        int soma = 0;
+        int[] pesosPrimeiroDigito = {5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
+        for (int i = 0; i < 12; i++) {
+            soma += obterDigito(cnpj, 13 - i) * pesosPrimeiroDigito[i];
+        }
+        int primeiroDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
+
+        soma = 0;
+        int[] pesosSegundoDigito = {6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
+        for (int i = 0; i < 13; i++) {
+            soma += obterDigito(cnpj, 14 - i) * pesosSegundoDigito[i];
+        }
+        int segundoDigitoVerificador = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
+
+        return (obterDigito(cnpj, 1) == primeiroDigitoVerificador) &&
+               (obterDigito(cnpj, 0) == segundoDigitoVerificador);
+    }
 }
