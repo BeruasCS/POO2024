@@ -24,11 +24,11 @@ public class AtvAvaliativa1 {
 
         System.out.println("O CPF " + cpfValido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfValido));
         System.out.println("O CPF " + cpfInvalido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfInvalido));
-        String cpfStringValido = "12345678909"; // Exemplo de CPF válido
-        String cpfStringInvalido = "12345678900"; // Exemplo de CPF inválido
+        String cpfStringValido = "142.307.030-58"; // Exemplo de CPF válido
+        String cpfStringInvalido = "002.307.030-58"; // Exemplo de CPF inválido
 
-       // System.out.println("O CPF " + cpfStringValido + " é válido? " + isCpfValido(cpfStringValido));
-        //System.out.println("O CPF " + cpfStringInvalido + " é válido? " + isCpfValido(cpfStringInvalido));
+       System.out.println("O CPF " + cpfStringValido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfStringValido));
+       System.out.println("O CPF " + cpfStringInvalido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfStringInvalido));
         
     }
     
