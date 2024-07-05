@@ -32,5 +32,12 @@ public class PasseioCavaloSemHeurística {
         /*nesse conatrutor, damos a posicao inicial, marcamos como ocupada, e
         contamos um movimento */
     }
-    
+    /*se chama tour pois o problema do passeio do cavalo e conhecido como 
+    the knights tour
+    */
+    public int tour(){
+        
+        
+        return(quantidade);
+}
 }
