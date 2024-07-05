@@ -21,4 +21,16 @@ public class PasseioCavaloSemHeurística {
  array vertical ou horizontal escolheremos, e nseesaposicao temos o 
  movimento que faremos*/
     
+    
+    PasseioCavaloSemHeurística(int valorHorizontal, int valorVertical){
+        
+        this.currentRow= valorHorizontal;
+        this.currentColumn= valorVertical;
+        this.tabuleiro[valorHorizontal][valorVertical]=1; 
+        this.quantidade=1;
+        
+        /*nesse conatrutor, damos a posicao inicial, marcamos como ocupada, e
+        contamos um movimento */
+    }
+    
 }
