@@ -55,8 +55,22 @@ public class PasseioCavaloSemHeurística {
    
    public void tour(){
        for(moveNumber =0; moveNumber<8; moveNumber++){
-           
+          if(dentroDoTabuleiro(moveNumber)){
+              if(casaDisponivel(moveNumber)){
+                currentRow += horizontal[moveNumber]; 
+                currentColumn += vertical[moveNumber]; 
+                quantidade = quantidade+1;                         
+                tabuleiro[currentRow][currentColumn] = quantidade;
+                moveNumber = 0; 
+                /*se o movimento foi feito, ele vai zerar o 
+                moveNumber, pois fizemos o movimento, caso ele nao tenha sido
+                feito, o for vai rodar e vamos tentar outros movimentos e assim
+                em diante*/
+
+              }
+          }
            
            
    }
+}
 }
