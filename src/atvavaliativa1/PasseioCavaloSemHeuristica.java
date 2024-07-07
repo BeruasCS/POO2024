@@ -32,9 +32,8 @@ public class PasseioCavaloSemHeuristica {
         /*nesse conatrutor, damos a posicao inicial, marcamos como ocupada, e
         contamos um movimento */
     }
-    /*se chama tour pois o problema do passeio do cavalo e conhecido como 
-    the knights tour
-    */
+ 
+    
    private boolean casaDisponivel(int moverPara){ //aqui eu vejo se essa casa n foi utilizada
        
        return(tabuleiro
