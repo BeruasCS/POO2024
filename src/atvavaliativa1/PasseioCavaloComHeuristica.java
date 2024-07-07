@@ -91,6 +91,25 @@ public class PasseioCavaloComHeuristica {
         }
          
     }
+     
+    public void mostrarTabuleiro() {
+        // Printa a identificação das colunas
+        System.out.print("  ");
+        for (int i = 0; i < 8; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // Printa a identificação das linhas
+        for (int i = 0; i < tabuleiro.length; i++) {
+            // Print the row header
+            System.out.print((char) ('A' + i) + " ");
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                System.out.print(tabuleiro[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
    
 
 }
