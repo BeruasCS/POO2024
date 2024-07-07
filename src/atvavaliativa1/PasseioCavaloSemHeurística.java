@@ -42,4 +42,9 @@ public class PasseioCavaloSemHeurística {
 /*Coluna*/    [currentColumn+vertical[moverPara]]==0) ? true: false;
    }
    
+   private boolean dentroDoTabuleiro(int moverPara){
+        int newColumn = currentColumn + vertical[moveNumber];
+        int newRow = currentRow + horizontal[moveNumber];
+
+   }
 }
