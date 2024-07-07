@@ -37,8 +37,8 @@ public class PasseioCavaloSemHeuristica {
    private boolean casaDisponivel(int moverPara){ //aqui eu vejo se essa casa n foi utilizada
        
        return(tabuleiro
-/*Linha*/     [currentRow+horizontal[moverPara]]
-/*Coluna*/    [currentColumn+vertical[moverPara]]==0) ? true: false;
+        [currentRow+horizontal[moverPara]]
+        [currentColumn+vertical[moverPara]]==0) ? true: false;
    }
    
    private boolean dentroDoTabuleiro(int moverPara){
