@@ -24,4 +24,23 @@ public class PasseioCavaloComHeuristica {
                              {4, 6, 8, 8, 8, 8, 6, 4},
                              {3, 4, 6, 6, 6, 6, 4, 3},
                              {2, 3, 4, 4, 4, 4, 3, 2}};
+       PasseioCavaloComHeuristica(int valorHorizontal, int valorVertical){
+        
+        this.currentRow= valorHorizontal;
+        this.currentColumn= valorVertical;
+        this.tabuleiro[valorHorizontal][valorVertical]=1; 
+        this.quantidade=1;
+        
+        /*nesse conatrutor, damos a posicao inicial, marcamos como ocupada, e
+        contamos um movimento */
+        
+         private boolean casaDisponivel(int moverPara){ //aqui eu vejo se essa casa n foi utilizada
+       
+       return(tabuleiro
+/   [currentRow+horizontal[moverPara]]
+    [currentColumn+vertical[moverPara]]==0) ? true: false;
+   }
+        
+        
+        
 }
