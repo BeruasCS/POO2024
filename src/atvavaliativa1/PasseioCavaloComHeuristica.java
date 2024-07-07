@@ -91,7 +91,14 @@ public class PasseioCavaloComHeuristica {
         }
          
     }
-     
+       public void tour() {
+        while (quantidade < 64) {
+            acesso();
+        }
+        System.out.println("Total de movimentos: " + quantidade);
+        mostrarTabuleiro();
+    }
+
     public void mostrarTabuleiro() {
         // Printa a identificação das colunas
         System.out.print("  ");
