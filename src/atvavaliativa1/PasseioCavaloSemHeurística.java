@@ -35,9 +35,11 @@ public class PasseioCavaloSemHeurística {
     /*se chama tour pois o problema do passeio do cavalo e conhecido como 
     the knights tour
     */
-    public int tour(){
-        
-        
-        return(quantidade);
-}
+   private boolean casaDisponivel(int moverPara){ //aqui eu vejo se essa casa n foi utilizada
+       
+       return(tabuleiro
+/*Linha*/     [currentRow+horizontal[moverPara]]
+/*Coluna*/    [currentColumn+vertical[moverPara]]==0) ? true: false;
+   }
+   
 }
