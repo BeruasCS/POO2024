@@ -46,5 +46,17 @@ public class PasseioCavaloSemHeurística {
         int newColumn = currentColumn + vertical[moveNumber];
         int newRow = currentRow + horizontal[moveNumber];
 
+        boolean isColumnValid = newColumn >= 0 && newColumn < 8;
+        boolean isRowValid = newRow >= 0 && newRow < 8;
+
+        return isColumnValid && isRowValid;
+
+   }
+   
+   public void tour(){
+       for(moveNumber =0; moveNumber<8; moveNumber++){
+           
+           
+           
    }
 }
