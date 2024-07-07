@@ -30,7 +30,7 @@ public class PasseioCavaloComHeuristica {
             this.currentColumn= valorVertical;
             this.tabuleiro[valorHorizontal][valorVertical]=1; 
             this.quantidade=1;
-        
+            }
         /*nesse conatrutor, damos a posicao inicial, marcamos como ocupada, e
         contamos um movimento */
         
@@ -63,6 +63,34 @@ public class PasseioCavaloComHeuristica {
             accessibility[newRow][newColumn]--;
     }
 }
+     private void acesso(){
+        int proximaLinha = -1;
+        int proximaColuna = -1;
+        int menorAcessibilidade = Integer.MAX_VALUE;
      
-        
+
+        for (moveNumber = 0; moveNumber < 8; moveNumber++) {
+            if (dentroDoTabuleiro(moveNumber) && casaDisponivel(moveNumber)) {
+                int novaLinha = currentRow + horizontal[moveNumber];
+                int novaColuna = currentColumn + vertical[moveNumber];
+
+                if (accessibility[novaLinha][novaColuna] < menorAcessibilidade) {
+                    menorAcessibilidade = accessibility[novaLinha][novaColuna];
+                    proximaLinha = novaLinha;
+                    proximaColuna = novaColuna;
+                }
+            }
+        }
+
+        if (proximaLinha != -1 && proximaColuna != -1) {
+            currentRow = proximaLinha;
+            currentColumn = proximaColuna;
+            quantidade++;
+            tabuleiro[currentRow][currentColumn] = quantidade;
+            alterarAcessibilidade();
+        }
+         
+    }
+   
+
 }
