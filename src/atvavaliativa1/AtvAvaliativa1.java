@@ -29,7 +29,10 @@ public class AtvAvaliativa1 {
 
        System.out.println("O CPF " + cpfStringValido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfStringValido));
        System.out.println("O CPF " + cpfStringInvalido + " é válido? " + ValidadorCPFCNPJ.isCpfValido(cpfStringInvalido));
+       PasseioCavaloSemHeuristica knight = new PasseioCavaloSemHeuristica(0,0);
+
         
+        knight.tour();
     }
     
 }
