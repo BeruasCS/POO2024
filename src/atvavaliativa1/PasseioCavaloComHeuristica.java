@@ -53,6 +53,16 @@ public class PasseioCavaloComHeuristica {
 
    }
         
+   private void alterarAcessibilidade() {
+    for (int j = 0; j < 8; j++) {
+        int newColumn = currentColumn + vertical[j];
+        int newRow = currentRow + horizontal[j];
+
         
+        if (newColumn >= 0 && newColumn < 8 && newRow >= 0 && newRow < 8)
+            accessibility[newRow][newColumn]--;
+    }
+}
+     
         
 }
