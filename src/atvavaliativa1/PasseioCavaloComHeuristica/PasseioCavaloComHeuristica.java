@@ -107,9 +107,9 @@ public class PasseioCavaloComHeuristica {
         }
         System.out.println();
 
-        // Printa a identificação das colunas
+         // Printa a identificação das linhas
         for (int i = 0; i < tabuleiro.length; i++) {
-            // Printa a identificação das linhas
+           
             System.out.print((char) ('A' + i) + " ");
             for (int j = 0; j < tabuleiro[i].length; j++) {
                 System.out.print(tabuleiro[i][j] + " ");
