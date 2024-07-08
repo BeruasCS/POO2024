@@ -39,6 +39,40 @@ public class ValidadorCPFCNPJ {
         }
     }
 
-   
+    public static boolean isCnpjValido(long cnpj) {
+        if (cnpj < 10000000000000L || cnpj > 99999999999999L) {
+            return false;
+        }
+
+        int soma = 0;
+        int peso = 2;
+        for (int i = 11; i >= 0; i--) {
+            soma += obterDigito(cnpj, i) * peso;
+            peso++;
+            if (peso == 10) {
+                peso = 2;
+            }
+        }
+
+        int digitoVerificador = soma % 11;
+        if (digitoVerificador < 2) {
+            digitoVerificador = 0;
+        } else {
+            digitoVerificador = 11 - digitoVerificador;
+        }
+
+        return obterDigito(cnpj, 1) == digitoVerificador;
+    }
+
+    public static boolean isCnpjValido(String cnpj) {
+        cnpj = cnpj.replace(".", "").replace("-", "").replace("/", "");
+
+        try {
+            long cnpjLong = Long.parseLong(cnpj);
+            return isCnpjValido(cnpjLong);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 
 }
